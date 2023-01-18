@@ -1,0 +1,10 @@
+@import url(./reset.css);
+
+
+
+body{
+    background-color: blue;
+}
+.test{
+    font-size: 12rem;
+}
