@@ -211,13 +211,12 @@
     font-size: var(--fs-tl-desktop);
     color: var(--c-1);
     text-shadow: var(--shadow-s);
+    opacity: 0;
+    transform: translateY(40px);
 }
 
 .history__intro-flourish{
     width: 70vw;
-}
-.history__intro-flourish-top{
-
 }
 
 .history__intro-flourish-bottom{
