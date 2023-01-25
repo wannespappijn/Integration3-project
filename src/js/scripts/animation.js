@@ -11,7 +11,7 @@ const playFlourish1 = () => {
 
 
 const revealText = () => {
-const $container = document.querySelector(".landing__wrapper-left");
+const $container = document.querySelector(".landing__wrapper-text");
 const tl = gsap.timeline();
     tl.from( $container, 1.5, {
         delay: 0.1,
@@ -22,7 +22,7 @@ const tl = gsap.timeline();
 };
 
 const revealImage = () => {
-    const $imageContainer = document.querySelector(".landing__wrapper-right");
+    const $imageContainer = document.querySelector(".landing__wrapper-image");
     const tl = gsap.timeline();
     tl.from($imageContainer, 1.5, {
         delay: 0.1,
