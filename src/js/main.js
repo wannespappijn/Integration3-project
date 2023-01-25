@@ -1,4 +1,5 @@
 import '../css/style.css';
+import './scripts/animation.js';
 
 
 if (import.meta.hot) {
