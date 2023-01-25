@@ -2,9 +2,46 @@
 
 
 
-body{
+@font-face {
+    font-family: "teutonic";
+    src: url('../../assets/fonts/teutonic/Teutonic.woff2') format('woff2'),
+        url('../../assets/fonts/teutonic/Teutonic.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "cat-child";
+    src: url('../../assets/fonts/cat-child/cat-childs.regular.woff2') format('woff2'),
+        url('../../assets/fonts/cat-child/cat-childs.regular.woff') format('woff');
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "nunito";
+    src: url('../../assets/fonts/nunito/nunito.woff2') format('woff2'),
+        url('../../assets/fonts/nunito/nunito.woff') format('woff');
+    font-style: normal;
+}
+
+
+
+:root{
+    --fs-b-mobile: 0.9rem;
+    --fs-b-desktop: 1.5rem;
+}
+
+
+body {
     background-color: blue;
 }
-.test{
-    font-size: 12rem;
+
+.landing__title{
+    font-family: "teutonic";
+    font-size: 6.8rem;
+
 }
+
+
+
+@media (max-width: 480px) {}
