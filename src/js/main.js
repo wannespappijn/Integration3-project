@@ -1,6 +1,6 @@
 import '../css/style.css';
 import './scripts/animation.js';
-import './scripts/loader.js';
+import './scripts/preloader.js';
 
 
 if (import.meta.hot) {
