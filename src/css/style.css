@@ -39,7 +39,8 @@
     --fs-tl-desktop: 9rem;
     --fs-t-desktop: 6.8rem;
     --fs-st-desktop: 2.8rem;
-    --fs-t-mobile: 2rem;
+    --fs-t-mobile: 2.5rem;
+    --fs-tl-mobile: 5.5rem;
     --fs-st-mobile: 1.2rem;
 
     /* colors */
@@ -298,7 +299,89 @@
 .line {
     margin-top: 5rem;
     width: 40vw;
+    filter: contrast(0.95);
 }
+
+
+.instrument {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+}
+
+
+
+.instrument__image {
+    position: relative;
+    z-index: 2;
+    grid-row: 1/2;
+}
+
+.circle-element {
+    z-index: 1;
+    position: absolute;
+    left: -30vw;
+    margin-top: 10rem;
+    width: 75vw;
+}
+
+.instrument__image-img {
+    z-index: 3;
+    position: relative;
+    transform: rotate(26deg);
+    margin-top: 10rem;
+    width: 25vw;
+    left: 7vw;
+}
+
+.instrument__text {
+    width: 40vw;
+    position: relative;
+    margin-top: 20rem;
+}
+
+.instrument__text>* {
+    margin-bottom: var(--m-b-desktop);
+}
+
+.instrument__text-title {
+    font-family: "teutonic";
+    font-size: var(--fs-t-desktop);
+    color: var(--c-black);
+    text-shadow: var(--shadow-s);
+}
+
+.instrument__text-subtitle {
+    font-family: "cat-child";
+    font-size: var(--fs-st-desktop);
+    color: var(--c-black);
+    text-shadow: var(--shadow-s);
+}
+
+.instrument__text-text {
+    font-family: "nunito";
+    font-size: var(--fs-b-desktop);
+    line-height: var(--lh-b-desktop);
+    color: var(--c-black);
+    text-shadow: var(--shadow-s);
+}
+
+.instrument__text-play {
+    display: flex;
+    flex-direction: row;
+}
+
+.instrument__text-flourish {
+    position: absolute;
+    transform: rotate(90deg);
+    width: 25vw;
+    left: 30vw;
+    top: 15vw;
+    filter: brightness(0);
+}
+
+
+
 
 
 
@@ -350,7 +433,7 @@
     .landing__title {
         font-size: var(--fs-t-mobile);
         margin-top: 5rem;
-        width: 60vw;
+        width: 75vw;
     }
 
     .landing__subtitle {
@@ -380,5 +463,49 @@
     .landing__flourish {
         width: 75vw;
         margin-bottom: 1rem;
+    }
+
+    .history__intro-title {
+        font-size: var(--fs-tl-mobile);
+        line-height: 7rem;
+    }
+
+    .history__intro-flourish {
+        width: 100vw;
+    }
+
+    .history__intro {
+        height: 110vh;
+        width: 100vw;
+    }
+
+    .history__intro-wrapper {
+        top: 0;
+    }
+
+    .ancestors__intro {
+        width: 90vw;
+    }
+
+    .ancestors__intro>* {
+        margin-bottom: var(--m-b-mobile);
+    }
+
+    .ancestors__intro-title {
+        font-size: var(--fs-t-mobile);
+    }
+
+    .ancestors__intro-subtitle {
+        font-size: var(--fs-st-mobile);
+    }
+
+    .ancestors__intro-text {
+        font-size: var(--fs-b-mobile);
+        line-height: var(--lh-b-mobile);
+    }
+
+    .line {
+        width: 80vw;
+        margin-top: 4rem;
     }
 }

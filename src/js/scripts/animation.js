@@ -71,8 +71,20 @@ gsap.to(".ancestors__intro", {
         end: "bottom 30% ",
         scrub: 1,
         pinPosition: false,
-        markers: true,
+        // markers: true,
         onEnter: revealAncestors,
         once: true,
     }
 });
+
+
+const playInstrumentFlourish = () => {
+    bodymovin.loadAnimation({
+        container: document.querySelector(".instrument__text-flourish"),
+        renderer: 'svg',
+        loop: false,
+        path: '../../assets/svg-animations/flourish-1.json',
+    });
+};
+
+playInstrumentFlourish();
