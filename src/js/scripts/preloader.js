@@ -34,7 +34,7 @@ const revealText = () => {
 
 
 const revealImage = () => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 600px)");
     const $imageContainer = document.querySelector(".landing__wrapper-image");
     const tl = gsap.timeline();
     if (mediaQuery.matches) {
