@@ -1,4 +1,3 @@
-
 gsap.registerPlugin(ScrollTrigger);
 
 const playFlourish1 = () => {
@@ -30,8 +29,8 @@ const revealTitle = () => {
         opacity: 1,
         ease: "ease-in-out",
     });
-    setTimeout(playFlourish1, 500);
-    setTimeout(playFlourish2, 500);
+    setTimeout(playFlourish1, 650);
+    setTimeout(playFlourish2, 650);
 };
 
 
@@ -42,14 +41,38 @@ gsap.to(".history__intro-title", {
     scrollTrigger: {
         trigger: ".history__intro-title",
         start: "top 90%",
-        end: "bottom ",
+        end: "bottom 90% ",
         scrub: 1,
         pinPosition: false,
-        markers: true,
+        // markers: true,
         onEnter: revealTitle,
+        once : true,
     }
 });
 
 
 
 
+const revealAncestors = () => {
+
+    gsap.to(".ancestors__intro", 1.5, {
+        y: 0,
+        opacity: 1,
+        ease: "ease-in",
+    });
+};
+
+
+gsap.to(".ancestors__intro", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".ancestors__intro",
+        start: "top 65%",
+        end: "bottom 30% ",
+        scrub: 1,
+        pinPosition: false,
+        markers: true,
+        onEnter: revealAncestors,
+        once: true,
+    }
+});
