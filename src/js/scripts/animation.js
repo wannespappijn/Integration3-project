@@ -19,6 +19,45 @@ const playFlourish2 = () => {
 };
 
 
+const playFlourishHistorySummary = () => {
+    bodymovin.loadAnimation({
+        container: document.querySelector(".ancestors__summary-flourish"),
+        renderer: 'svg',
+        loop: false,
+        path: '../../assets/svg-animations/flourish-1.json',
+    });
+};
+
+
+
+const revealAncestorsSummary = () => {
+    playFlourishHistorySummary();
+    const $textAncestorsSummary = document.querySelector(".ancestors__summary-text");
+    $textAncestorsSummary.style.opacity = 1;
+    gsap.from(".ancestors__summary-text", 1, {
+        delay: 0.4,
+        y: 40,
+        opacity: 0,
+        ease: "ease-in-out",
+    });
+};
+
+
+
+gsap.to(".ancestors__summary-text", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".ancestors__summary-text",
+        start: "top 80%",
+        end: "bottom 80% ",
+        scrub: 1,
+        pinPosition: false,
+        // markers: true,
+        onEnter: revealAncestorsSummary,
+        once: true,
+    }
+});
+
 
 const revealRebab = () => {
     const $rebab = document.querySelector(".image-rebab");
@@ -33,10 +72,11 @@ const revealRebab = () => {
 };
 
 const revealRebabText = () => {
+    setTimeout(playInstrumentFlourishRebab, 400)
     const $textRebab = document.querySelector(".text-rebab");
     $textRebab.style.opacity = 1;
     gsap.from(".text-rebab", 1, {
-        delay : 0.4,
+        delay: 0.4,
         y: 40,
         opacity: 0,
         ease: "ease-in-out",
@@ -76,6 +116,7 @@ gsap.to(".rebab-text", {
 const revealRebec = () => {
     const $rebab = document.querySelector(".image-rebec");
     $rebab.style.opacity = 1;
+    setTimeout(playInstrumentFlourishRebec, 400)
     gsap.from(".image-rebec", 1, {
         x: 200,
         opacity: 0,
@@ -120,7 +161,7 @@ gsap.to(".rebec-text", {
         end: "bottom 50% ",
         scrub: 1,
         pinPosition: false,
-        markers: true,
+        // markers: true,
         onEnter: revealRebecText,
         once: true,
     }
@@ -130,6 +171,7 @@ gsap.to(".rebec-text", {
 const revealLyra = () => {
     const $lyra = document.querySelector(".image-lyra");
     $lyra.style.opacity = 1;
+    setTimeout(playInstrumentFlourishLyra, 400)
     gsap.from(".image-lyra", 1, {
         x: -200,
         opacity: 0,
@@ -243,13 +285,33 @@ gsap.to(".ancestors__intro", {
 });
 
 
-const playInstrumentFlourish = () => {
+const playInstrumentFlourishRebab = () => {
     bodymovin.loadAnimation({
-        container: document.querySelector(".instrument__text-flourish"),
+        container: document.querySelector(".instrument__text-flourish-rebab"),
         renderer: 'svg',
         loop: false,
         path: '../../assets/svg-animations/flourish-1.json',
     });
 };
 
-playInstrumentFlourish();
+
+const playInstrumentFlourishRebec = () => {
+    bodymovin.loadAnimation({
+        container: document.querySelector(".instrument__text-flourish-rebec"),
+        renderer: 'svg',
+        loop: false,
+        path: '../../assets/svg-animations/flourish-1.json',
+    });
+};
+
+
+const playInstrumentFlourishLyra = () => {
+    bodymovin.loadAnimation({
+        container: document.querySelector(".instrument__text-flourish-lyra"),
+        renderer: 'svg',
+        loop: false,
+        path: '../../assets/svg-animations/flourish-1.json',
+    });
+};
+
+
