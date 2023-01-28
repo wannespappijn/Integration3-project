@@ -503,15 +503,14 @@
     width: 102vw;
     left: -1vw;
     z-index: 1;
-   margin-top: -1rem;
+    margin-top: -1rem;
     transform: scaleY(-1);
 
 }
 
 
-.evolution{
+.evolution {
     width: 100vw;
-    height: 200vh;
     background-image: linear-gradient(90deg, var(--c-gr-3), var(--c-gr-4));
 }
 
@@ -519,6 +518,136 @@
     z-index: 4;
     position: relative;
 }
+
+
+.evolution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.evolution__title {
+    font-family: "teutonic";
+    font-size: var(--fs-t-desktop);
+    color: var(--c-white);
+    text-shadow: var(--shadow-s);
+    margin-top: 30%;
+    width: 45vw;
+    text-align: center;
+}
+
+.origins {
+    width: 90vw;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 8rem;
+}
+
+
+.origins__text-text {
+    font-family: "nunito";
+    font-size: var(--fs-b-desktop);
+    line-height: var(--lh-b-desktop);
+    color: var(--c-white);
+    text-shadow: var(--shadow-s);
+    width: 45vw;
+}
+
+.origins__image {
+    position: relative;
+}
+
+.origins__title {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    bottom: 12%;
+    text-align: center;
+    font-family: "cat-child";
+    font-size: var(--fs-st-desktop);
+    color: var(--c-white);
+    text-shadow: var(--shadow-s);
+}
+
+.origins__image-img {
+    width: 100%;
+    transform-origin: center;
+}
+
+.origins__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.origins__text>* {
+    margin-bottom: var(--m-b-desktop);
+}
+
+
+.builder {
+    width: 90vw;
+    display: grid;
+    grid-template-areas:
+        "left right";
+    height: 100vh;
+    align-items: center;
+}
+
+.builder__image {
+    position: relative;
+    width: 100%;
+    grid-area: right;
+}
+
+.builder__title {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    bottom: 12%;
+    right: 17%;
+    text-align: center;
+    font-family: "cat-child";
+    font-size: var(--fs-st-desktop);
+    color: var(--c-white);
+    text-shadow: var(--shadow-s);
+}
+
+.builder__text {
+    grid-area: left;
+    width: 40vw;
+}
+
+
+.builder__text-text {
+    font-family: "nunito";
+    font-size: var(--fs-b-desktop);
+    line-height: var(--lh-b-desktop);
+    color: var(--c-white);
+    text-shadow: var(--shadow-s);
+}
+
+.builder__image-stradivari {
+    grid-area: left;
+}
+
+.builder__text-stradivari {
+    grid-area: right;
+}
+
+.builder-flourish-bottom{
+    transform: scaleY(-1);
+}
+
+
+
+
+
 
 
 

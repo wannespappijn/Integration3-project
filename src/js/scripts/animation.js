@@ -28,6 +28,66 @@ const playFlourishHistorySummary = () => {
     });
 };
 
+const playAmatiFlourishTop = () => {
+    bodymovin.loadAnimation({
+        container: document.querySelector(".amati-flourish-top"),
+        renderer: 'svg',
+        loop: false,
+        path: '../../assets/svg-animations/flourish-2.json',
+    });
+};
+const playAmatiFlourishBottom = () => {
+    bodymovin.loadAnimation({
+        container: document.querySelector(".amati-flourish-bottom"),
+        renderer: 'svg',
+        loop: false,
+        path: '../../assets/svg-animations/flourish-2.json',
+    });
+};
+
+const playStradivariFlourishTop = () => {
+    bodymovin.loadAnimation({
+        container: document.querySelector(".stradivari-flourish-top"),
+        renderer: 'svg',
+        loop: false,
+        path: '../../assets/svg-animations/flourish-2.json',
+    });
+};
+
+const playStradivariFlourishBottom = () => {
+    bodymovin.loadAnimation({
+        container: document.querySelector(".stradivari-flourish-bottom"),
+        renderer: 'svg',
+        loop: false,
+        path: '../../assets/svg-animations/flourish-2.json',
+    });
+};
+
+const playModernFlourishTop = () => {
+    bodymovin.loadAnimation({
+        container: document.querySelector(".modern-flourish-top"),
+        renderer: 'svg',
+        loop: false,
+        path: '../../assets/svg-animations/flourish-2.json',
+    });
+};
+
+const playModernFlourishBottom = () => {
+    bodymovin.loadAnimation({
+        container: document.querySelector(".modern-flourish-bottom"),
+        renderer: 'svg',
+        loop: false,
+        path: '../../assets/svg-animations/flourish-2.json',
+    });
+};
+
+
+playAmatiFlourishTop();
+playAmatiFlourishBottom();
+playStradivariFlourishTop();
+playStradivariFlourishBottom();
+playModernFlourishTop();
+playModernFlourishBottom();
 
 
 const revealAncestorsSummary = () => {
