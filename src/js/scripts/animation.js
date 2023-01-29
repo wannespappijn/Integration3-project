@@ -82,12 +82,197 @@ const playModernFlourishBottom = () => {
 };
 
 
-playAmatiFlourishTop();
-playAmatiFlourishBottom();
-playStradivariFlourishTop();
-playStradivariFlourishBottom();
-playModernFlourishTop();
-playModernFlourishBottom();
+
+const revealOriginsImage = () => {
+    const $originsImage = document.querySelector(".origins__image");
+    $originsImage.style.opacity = 1;
+    gsap.from(".origins__image", 1, {
+        y: 40,
+        opacity: 0,
+        ease: "ease-in-out",
+    });
+};
+
+const revealOriginsText = () => {
+    const $originsText = document.querySelector(".origins__text");
+    $originsText.style.opacity = 1;
+    gsap.from(".origins__text", 1, {
+        delay: 0.4,
+        y: 40,
+        opacity: 0,
+        ease: "ease-in-out",
+    });
+};
+
+gsap.to(".origins__text", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".origins__text",
+        start: "top 80%",
+        end: "bottom 80% ",
+        markers: true,
+        onEnter: revealOriginsText,
+        once: true,
+    }
+});
+
+gsap.to(".origins__image", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".origins__image",
+        start: "top 80%",
+        end: "bottom 80% ",
+        // markers: true,
+        onEnter: revealOriginsImage,
+        once: true,
+    }
+});
+
+const revealAmatiImage = () => {
+    const $amatiImage = document.querySelector(".builder__image-amati");
+    $amatiImage.style.opacity = 1;
+    gsap.from(".builder__image-amati", 1, {
+        y: 40,
+        opacity: 0,
+        ease: "ease-in-out",
+    });
+};
+
+const revealAmatiText = () => {
+    setTimeout(playAmatiFlourishTop, 400);
+    setTimeout(playAmatiFlourishBottom, 400);
+    const $amatiText = document.querySelector(".builder__text-amati");
+    $amatiText.style.opacity = 1;
+    gsap.from(".builder__text-amati", 1, {
+        delay: 0.4,
+        y: 40,
+        opacity: 0,
+        ease: "ease-in-out",
+    });
+};
+
+gsap.to(".builder__image-amati", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".builder__image-amati",
+        start: "top 80%",
+        end: "bottom 80% ",
+        markers: true,
+        onEnter: revealAmatiImage,
+        once: true,
+    }
+});
+
+gsap.to(".builder__text-amati", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".builder__text-amati",
+        start: "top 80%",
+        end: "bottom 80% ",
+        // markers: true,
+        onEnter: revealAmatiText,
+        once: true,
+    }
+});
+
+const revealStradivariImage = () => {
+    const $stradivariImage = document.querySelector(".builder__image-stradivari");
+    $stradivariImage.style.opacity = 1;
+    gsap.from(".builder__image-stradivari", 1, {
+        y: 40,
+        opacity: 0,
+        ease: "ease-in-out",
+    });
+};
+
+const revealStradivariText = () => {
+    setTimeout(playStradivariFlourishTop, 400);
+    setTimeout(playStradivariFlourishBottom, 400);
+    const $stradivariText = document.querySelector(".builder__text-stradivari");
+    $stradivariText.style.opacity = 1;
+    gsap.from(".builder__text-stradivari", 1, {
+        delay: 0.4,
+        y: 40,
+        opacity: 0,
+        ease: "ease-in-out",
+    });
+};
+
+gsap.to(".builder__image-stradivari", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".builder__image-stradivari",
+        start: "top 80%",
+        end: "bottom 80% ",
+        markers: true,
+        onEnter: revealStradivariImage,
+        once: true,
+    }
+});
+
+gsap.to(".builder__text-stradivari", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".builder__text-stradivari",
+        start: "top 80%",
+        end: "bottom 80% ",
+        // markers: true,
+        onEnter: revealStradivariText,
+        once: true,
+    }
+});
+
+
+const revealModernImage = () => {
+    const $modernImage = document.querySelector(".builder__image-modern");
+    $modernImage.style.opacity = 1;
+    gsap.from(".builder__image-modern", 1, {
+        y: 40,
+        opacity: 0,
+        ease: "ease-in-out",
+    });
+};
+
+const revealModernText = () => {
+    setTimeout(playModernFlourishTop, 400);
+    setTimeout(playModernFlourishBottom, 400);
+    const $modernText = document.querySelector(".builder__text-modern");
+    $modernText.style.opacity = 1;
+    gsap.from(".builder__text-modern", 1, {
+        delay: 0.4,
+        y: 40,
+        opacity: 0,
+        ease: "ease-in-out",
+    });
+};
+
+gsap.to(".builder__image-modern", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".builder__image-modern",
+        start: "top 80%",
+        end: "bottom 80% ",
+        markers: true,
+        onEnter: revealModernImage,
+        once: true,
+    }
+});
+
+gsap.to(".builder__text-modern", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".builder__text-modern",
+        start: "top 80%",
+        end: "bottom 80% ",
+        // markers: true,
+        onEnter: revealModernText,
+        once: true,
+    }
+});
+
+
+
+
 
 
 const revealAncestorsSummary = () => {
