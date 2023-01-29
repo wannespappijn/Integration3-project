@@ -451,14 +451,6 @@
     margin-bottom: 10rem;
 }
 
-
-
-.instrument__text-play-button:active {
-    cursor: pointer;
-    animation: spin 1s linear infinite;
-
-}
-
 .image-rebab,
 .image-rebec,
 .image-lyra {
@@ -652,6 +644,71 @@
     position: absolute;
     transform: scaleY(-1);
     margin-top: 2rem;
+}
+
+.wiggle {
+    animation: wiggle 2s ease-in-out infinite;
+}
+
+.spin {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+
+    10% {
+        transform: rotate(-8deg);
+        transform-origin: 50% 50%;
+    }
+
+    20% {
+        transform: rotate(4deg);
+        transform-origin: 50% 50%;
+    }
+
+    30% {
+        transform: rotate(-5deg);
+        transform-origin: 50% 50%;
+    }
+
+    40% {
+        transform: rotate(2deg);
+        transform-origin: 50% 50%;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+
+    60% {
+        transform: rotate(-7deg);
+        transform-origin: 50% 50%;
+    }
+
+    70% {
+        transform: rotate(4deg);
+        transform-origin: 50% 50%;
+    }
+
+    80% {
+        transform: rotate(-1deg);
+        transform-origin: 50% 50%;
+    }
+
+    90% {
+        transform: rotate(2deg);
+        transform-origin: 50% 50%;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
 }
 
 

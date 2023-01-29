@@ -110,7 +110,7 @@ gsap.to(".origins__text", {
         trigger: ".origins__text",
         start: "top 80%",
         end: "bottom 80% ",
-        markers: true,
+        // markers: true,
         onEnter: revealOriginsText,
         once: true,
     }
@@ -157,7 +157,7 @@ gsap.to(".builder__image-amati", {
         trigger: ".builder__image-amati",
         start: "top 80%",
         end: "bottom 80% ",
-        markers: true,
+        // markers: true,
         onEnter: revealAmatiImage,
         once: true,
     }
@@ -204,7 +204,7 @@ gsap.to(".builder__image-stradivari", {
         trigger: ".builder__image-stradivari",
         start: "top 80%",
         end: "bottom 80% ",
-        markers: true,
+        // markers: true,
         onEnter: revealStradivariImage,
         once: true,
     }
@@ -252,7 +252,7 @@ gsap.to(".builder__image-modern", {
         trigger: ".builder__image-modern",
         start: "top 80%",
         end: "bottom 80% ",
-        markers: true,
+        // markers: true,
         onEnter: revealModernImage,
         once: true,
     }
