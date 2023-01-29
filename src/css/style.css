@@ -650,64 +650,52 @@
     animation: wiggle 2s ease-in-out infinite;
 }
 
-.spin {
-    animation: spin 2s linear infinite;
-}
+.spin{
+    animation: spin 2s linear infinite;}
 
 @keyframes wiggle {
     0% {
-        transform: rotate(0deg);
-        transform-origin: 50% 50%;
+        transform: rotate(28deg);
     }
 
     10% {
-        transform: rotate(-8deg);
-        transform-origin: 50% 50%;
+        transform: rotate(24deg);
     }
 
     20% {
-        transform: rotate(4deg);
-        transform-origin: 50% 50%;
+        transform: rotate(30deg);
     }
 
     30% {
-        transform: rotate(-5deg);
-        transform-origin: 50% 50%;
+        transform: rotate(22deg);
     }
 
     40% {
-        transform: rotate(2deg);
-        transform-origin: 50% 50%;
+        transform: rotate(29deg);
     }
 
     50% {
-        transform: rotate(0deg);
-        transform-origin: 50% 50%;
+        transform: rotate(25deg);
     }
 
     60% {
-        transform: rotate(-7deg);
-        transform-origin: 50% 50%;
+        transform: rotate(29deg);
     }
 
     70% {
-        transform: rotate(4deg);
-        transform-origin: 50% 50%;
+        transform: rotate(20deg);
     }
 
     80% {
-        transform: rotate(-1deg);
-        transform-origin: 50% 50%;
+        transform: rotate(25deg);
     }
 
     90% {
-        transform: rotate(2deg);
-        transform-origin: 50% 50%;
+        transform: rotate(23deg);
     }
 
     100% {
-        transform: rotate(0deg);
-        transform-origin: 50% 50%;
+        transform: rotate(26deg);
     }
 }
 
