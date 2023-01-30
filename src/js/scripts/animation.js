@@ -354,7 +354,7 @@ if (mediaQuery.matches) {
             trigger: ".text-rebab",
             start: "top 70%",
             end: "bottom 70% ",
-            markers: true,
+            // markers: true,
             onEnter: revealRebab,
             once: true,
         }
@@ -401,195 +401,59 @@ if (mediaQuery.matches) {
 }
 
 
-const revealRebec = () => {
-    const $rebec = document.querySelector(".image-rebec");
-    $rebec.style.opacity = 1;
-    if (mediaQuery.matches) {
-        gsap.from(".image-rebec", 1, {
-            x: -100,
-            opacity: 0,
-            ease: "ease-in-out",
-            rotate: -3,
-        });
-    } else {
-        gsap.from(".image-rebec", 1, {
-            x: -200,
-            opacity: 0,
-            ease: "ease-in-out",
-            rotate: -3,
-        });
-    };
-};
 
-const revealRebecText = () => {
-    setTimeout(playInstrumentFlourishRebab, 400)
-    const $textRebec = document.querySelector(".text-rebec");
-    $textRebec.style.opacity = 1;
-    if (mediaQuery.matches) {
-        gsap.from(".text-rebec", 1, {
-            delay: 0.4,
-            y: 20,
-            opacity: 0,
-            ease: "ease-in-out",
-        });
-    } else {
-        gsap.from(".text-rebec", 1, {
-            delay: 0.4,
-            y: 40,
-            opacity: 0,
-            ease: "ease-in-out",
-        });
-    }
-};
-
-
-if (mediaQuery.matches) {
-    gsap.to(".rebec-image", {
-        transformOrigin: "bottom center",
-        scrollTrigger: {
-            trigger: ".text-rebec",
-            start: "top 70%",
-            end: "bottom 70% ",
-            markers: true,
-            onEnter: revealRebec,
-            once: true,
-        }
-    });
-
-
-    gsap.to(".rebec-text", {
-        transformOrigin: "bottom center",
-        scrollTrigger: {
-            trigger: ".text-rebec",
-            start: "top 70%",
-            end: "bottom 70% ",
-            // markers: true,
-            onEnter: revealRebecText,
-            once: true,
-        }
-    });
-
-} else {
-    gsap.to(".rebab-imaec", {
-        transformOrigin: "bottom center",
-        scrollTrigger: {
-            trigger: ".image-rebec",
-            start: "top 50%",
-            end: "bottom 50% ",
-            // markers: true,
-            onEnter: revealRebec,
-            once: true,
-        }
-    });
-
-
-    gsap.to(".rebec-text", {
-        transformOrigin: "bottom center",
-        scrollTrigger: {
-            trigger: ".image-rebec",
-            start: "top 50%",
-            end: "bottom 50% ",
-            // markers: true,
-            onEnter: revealRebecText,
-            once: true,
-        }
-    });
-}
 
 const revealLyra = () => {
-    const $Lyra = document.querySelector(".image-lyra");
-    $Lyra.style.opacity = 1;
-    if (mediaQuery.matches) {
-        gsap.from(".image-lyra", 1, {
-            x: -100,
-            opacity: 0,
-            ease: "ease-in-out",
-            rotate: -3,
-        });
-    } else {
-        gsap.from(".image-lyra", 1, {
-            x: -200,
-            opacity: 0,
-            ease: "ease-in-out",
-            rotate: -3,
-        });
-    };
+    const $lyra = document.querySelector(".image-lyra");
+    $lyra.style.opacity = 1;
+    setTimeout(playInstrumentFlourishLyra, 400)
+    gsap.from(".image-lyra", 1, {
+        x: -200,
+        opacity: 0,
+        ease: "ease-in-out",
+        rotate: -3,
+    });
+
 };
 
 const revealLyraText = () => {
-    setTimeout(playInstrumentFlourishLyra, 400)
     const $textLyra = document.querySelector(".text-lyra");
     $textLyra.style.opacity = 1;
-    if (mediaQuery.matches) {
-        gsap.from(".text-lyra", 1, {
-            delay: 0.4,
-            y: 20,
-            opacity: 0,
-            ease: "ease-in-out",
-        });
-    } else {
-        gsap.from(".text-lyra", 1, {
-            delay: 0.4,
-            y: 40,
-            opacity: 0,
-            ease: "ease-in-out",
-        });
-    }
+    gsap.from(".text-lyra", 1, {
+        delay: 0.4,
+        y: 40,
+        opacity: 0,
+        ease: "ease-in-out",
+    });
 };
 
 
-if (mediaQuery.matches) {
-    gsap.to(".lyra-image", {
-        transformOrigin: "bottom center",
-        scrollTrigger: {
-            trigger: ".text-lyra",
-            start: "top 70%",
-            end: "bottom 70% ",
-            markers: true,
-            onEnter: revealLyra,
-            once: true,
-        }
-    });
+
+gsap.to(".image-lya", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".image-lyra",
+        start: "top 50%",
+        end: "bottom 50% ",
+        // markers: true,
+        onEnter: revealLyra,
+        once: true,
+    }
+});
+
+gsap.to(".text-lyra", {
+    transformOrigin: "bottom center",
+    scrollTrigger: {
+        trigger: ".image-lyra",
+        start: "top 50%",
+        end: "bottom 50% ",
+        scrub: 1,
+        onEnter: revealLyraText,
+        once: true,
+    }
+});
 
 
-    gsap.to(".lyra-text", {
-        transformOrigin: "bottom center",
-        scrollTrigger: {
-            trigger: ".text-lyra",
-            start: "top 70%",
-            end: "bottom 70% ",
-            // markers: true,
-            onEnter: revealLyraText,
-            once: true,
-        }
-    });
-
-} else {
-    gsap.to(".lyra-image", {
-        transformOrigin: "bottom center",
-        scrollTrigger: {
-            trigger: ".image-lyra",
-            start: "top 50%",
-            end: "bottom 50% ",
-            // markers: true,
-            onEnter: revealLyra,
-            once: true,
-        }
-    });
-
-
-    gsap.to(".lyra-text", {
-        transformOrigin: "bottom center",
-        scrollTrigger: {
-            trigger: ".image-lyra",
-            start: "top 50%",
-            end: "bottom 50% ",
-            // markers: true,
-            onEnter: revealLyraText,
-            once: true,
-        }
-    });
-}
 
 
 
