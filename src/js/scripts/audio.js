@@ -26,6 +26,8 @@ const playAudio = (audio, playButton, image) => {
             currentImage = $image;
         }
     });
+
+    
 }
 
 playAudio(".audio-rebec", ".play-button-rebec", ".image-rebec");
