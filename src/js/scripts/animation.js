@@ -400,6 +400,101 @@ if (mediaQuery.matches) {
     });
 }
 
+const revealRebec = () => {
+    const $rebec = document.querySelector(".image-rebec");
+    $rebec.style.opacity = 1;
+    if (mediaQuery.matches) {
+        gsap.from(".image-rebec", 1, {
+            x: -100,
+            opacity: 0,
+            ease: "ease-in-out",
+            rotate: -3,
+        });
+    } else {
+        gsap.from(".image-rebec", 1, {
+            x: -200,
+            opacity: 0,
+            ease: "ease-in-out",
+            rotate: -3,
+        });
+    };
+};
+
+const revealRebecText = () => {
+    setTimeout(playInstrumentFlourishRebec, 400)
+    const $textRebec = document.querySelector(".text-rebec");
+    $textRebec.style.opacity = 1;
+    if (mediaQuery.matches) {
+        gsap.from(".text-rebec", 1, {
+            delay: 0.4,
+            y: 20,
+            opacity: 0,
+            ease: "ease-in-out",
+        });
+    } else {
+        gsap.from(".text-rebec", 1, {
+            delay: 0.4,
+            y: 40,
+            opacity: 0,
+            ease: "ease-in-out",
+        });
+    }
+};
+
+
+if (mediaQuery.matches) {
+    gsap.to(".rebec-image", {
+        transformOrigin: "bottom center",
+        scrollTrigger: {
+            trigger: ".text-rebec",
+            start: "top 70%",
+            end: "bottom 70% ",
+            // markers: true,
+            onEnter: revealRebec,
+            once: true,
+        }
+    });
+
+
+    gsap.to(".rebec-text", {
+        transformOrigin: "bottom center",
+        scrollTrigger: {
+            trigger: ".text-rebec",
+            start: "top 70%",
+            end: "bottom 70% ",
+            // markers: true,
+            onEnter: revealRebecText,
+            once: true,
+        }
+    });
+
+} else {
+    gsap.to(".rebec-image", {
+        transformOrigin: "bottom center",
+        scrollTrigger: {
+            trigger: ".image-rebec",
+            start: "top 50%",
+            end: "bottom 50% ",
+            // markers: true,
+            onEnter: revealRebec,
+            once: true,
+        }
+    });
+
+
+    gsap.to(".rebec-text", {
+        transformOrigin: "bottom center",
+        scrollTrigger: {
+            trigger: ".image-rebec",
+            start: "top 50%",
+            end: "bottom 50% ",
+            // markers: true,
+            onEnter: revealRebecText,
+            once: true,
+        }
+    });
+}
+
 
 
 
